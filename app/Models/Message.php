@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+
+        'from',
+        'to',
+        'content',
+        'date',
+        'state'
+    ];
+
+    protected $primaryKey = "messageId";
+    public $timestamps = false;
 }

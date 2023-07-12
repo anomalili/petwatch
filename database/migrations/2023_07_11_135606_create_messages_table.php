@@ -17,7 +17,7 @@ return new class extends Migration
         
         Schema::create('Messages', function (Blueprint $table) {
             
-            $table->bigIncrements('message_id');
+            $table->bigIncrements('messageId');
             $table->foreignId('from')->references('user_id')->on('users'); // sex kell a 32
             $table->foreignId('to')->references('user_id')->on('users'); // sex kell a 32
             $table->longText('content', 150);

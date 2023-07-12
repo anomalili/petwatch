@@ -15,10 +15,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('report', function (Blueprint $table) {
-            $table->bigIncrements('report_id');
+            $table->bigIncrements('reportId');
             $table->smallInteger('animalState')->nullable(); // állat állapota 1 - eltűnt 2 - talált
             $table->smallInteger('reportState')->default(1); // bejelentés állapota 1 - ellenörzés alatt, 2 - látható, 3 - törölt
-            $table->foreignId('locationData')->references('locationData_id')->on('locationDatas');
+            $table->foreignId('locationData')->references('locationDataId')->on('locationDatas');
             $table->foreignId('user')->references('user_id')->on('users');
             $table->longText('imgUrl')->default("pics/0.jpg");
             $table->string('species');

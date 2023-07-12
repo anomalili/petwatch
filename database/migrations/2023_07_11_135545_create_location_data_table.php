@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Helyadatok;
 use App\Models\LocationData;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;

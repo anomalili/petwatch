@@ -15,11 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('comment', function (Blueprint $table) {
-            $table->bigIncrements('comment_id');
+            $table->bigIncrements('commentId');
             $table->foreignId('reportId')->references('reportId')->on('bejelentes');
             $table->foreignId('from')->references('user_id')->on('users');
             $table->longText('text');
-            $table->timestamp('datum')->useCurrent();
+            $table->timestamp('date')->useCurrent();
 
          //   $table->foreignId('from')
            // $table->foreignId('reportId')
