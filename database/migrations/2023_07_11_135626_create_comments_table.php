@@ -21,9 +21,6 @@ return new class extends Migration
             $table->longText('text');
             $table->timestamp('date')->useCurrent();
 
-         //   $table->foreignId('from')
-           // $table->foreignId('reportId')
-
         });
 
         Comment::create(['reportId'=>1,'from'=>1,'text'=>'MEG VAN!']);
@@ -45,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment');
+        Schema::dropIfExists('comments');
     }
 };
