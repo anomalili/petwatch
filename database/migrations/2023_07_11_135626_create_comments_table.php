@@ -14,9 +14,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comment', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('commentId');
-            $table->foreignId('reportId')->references('reportId')->on('bejelentes');
+            $table->foreignId('reportId')->references('reportId')->on('reports');
             $table->foreignId('from')->references('user_id')->on('users');
             $table->longText('text');
             $table->timestamp('date')->useCurrent();

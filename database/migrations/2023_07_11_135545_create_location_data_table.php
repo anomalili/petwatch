@@ -14,24 +14,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('locationDatas', function (Blueprint $table) {
+        Schema::create('Location_data', function (Blueprint $table) {
             $table->bigIncrements('locationDataId');
-            
             $table->Integer('zip')->unsigned();
             $table->string('city', 32)->default("");
             $table->string('gps_width', 32)->default(0);
             $table->string('gps_lenght', 32)->default(0);
-           // $table->primary('locationData_id');
         });
 
-        LocationData::create(['locationDataId'=> 101,'zip'=>2234, 'city'=>'Maglód']);
-        LocationData::create(['locationDataId'=> 102,'zip'=>6000, 'city'=>'Kecskemét']);
-        LocationData::create(['locationDataId'=> 103,'zip'=>4000, 'city'=>'Debrecen']);
-        LocationData::create(['locationDataId'=> 104,'zip'=>4031, 'city'=>'Debrecen']);
-        LocationData::create(['locationDataId'=> 105,'zip'=>1022, 'city'=>'Budapest']);
-        LocationData::create(['locationDataId'=> 106,'zip'=>1026, 'city'=>'Budapest']);
-        LocationData::create(['locationDataId'=> 107,'zip'=>1011, 'city'=>'Budapest']);
-
+        LocationData::create(['locationDataId' => 101, 'zip' => 2234, 'city' => 'Maglód']);
+        LocationData::create(['locationDataId' => 102, 'zip' => 6000, 'city' => 'Kecskemét']);
+        LocationData::create(['locationDataId' => 103, 'zip' => 4000, 'city' => 'Debrecen']);
+        LocationData::create(['locationDataId' => 104, 'zip' => 4031, 'city' => 'Debrecen']);
+        LocationData::create(['locationDataId' => 105, 'zip' => 1022, 'city' => 'Budapest']);
+        LocationData::create(['locationDataId' => 106, 'zip' => 1026, 'city' => 'Budapest']);
+        LocationData::create(['locationDataId' => 107, 'zip' => 1011, 'city' => 'Budapest']);
     }
 
     /**
